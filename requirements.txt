@@ -1,0 +1,3 @@
+PyYAML
+python-telegram-bot
+simplesqlitewrap==0.1.11
