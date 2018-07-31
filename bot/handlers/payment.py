@@ -86,7 +86,7 @@ def successful_payment_callback(bot, update):
         successful_payment_date=update.message.date
     )
 
-    bot.send_message(chat_id, s.SUCCESSFULL_PAYMENT.fromat(amount=amount / 100))
+    bot.send_message(chat_id, s.SUCCESSFULL_PAYMENT.format(amount=amount / 100))
 
 
 HANDLERS = (
