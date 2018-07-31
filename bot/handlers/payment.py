@@ -55,7 +55,7 @@ def on_text_message(bot, update):
                 )
             except BadRequest as e:
                 error_string = str(e)
-                logger.info('[%d] sendInvoice exception: %s', error_string, exc_info=True)
+                logger.info('[%d] sendInvoice exception: %s', chat_id, error_string, exc_info=True)
                 update.message.reply_markdown(s.INVOICE_ERROR.format(error_string=error_string))
                 return
 

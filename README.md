@@ -22,6 +22,7 @@ It uses [Stripe](https://stripe.com/) as payment provider and requires minimal s
     - `filename`: name of the sqlite database
   - `[log]` (optional):
     - `filename`: name of the log file
+3. start the bot from Telegram
 
 Now the bot can be started: `python3 main.py`. To use Stripe's TEST token, run it with the `-t` flag: `python3 main.py -t`
 

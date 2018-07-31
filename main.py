@@ -52,8 +52,13 @@ def main(args):
     for cb in callbacks:
         jobs.run_daily(cb, time=datetime.time(hour=4, minute=00))
 
-    updater.bot.send_message(config.telegram.owner_id,
-                             '#paymentsbot_running ({})'.format('TEST token' if args.test else 'LIVE token'))
+    try:
+        # try to notify the owner
+        updater.bot.send_message(config.telegram.owner_id,
+                                '#paymentsbot_running ({})'.format('TEST token' if args.test else 'LIVE token'))
+    except:
+        pass
+    
     logger.info('starting polling loop...')
     updater.start_polling(clean=True)
     updater.idle()
